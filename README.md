@@ -25,7 +25,7 @@ O objetivo é melhorar a produtividade, combater a procrastinação e manter a m
 1. Clone o repositório
 
 ```bash
-git clone ....
+git clone https://github.com/Muciri/pomotimer.git
 ```
 
 2. Instale as dependências:
@@ -43,5 +43,5 @@ npm run start
 
 ## **Preview**
 <p align="center">
-    <img src="">
+    <img src="https://raw.githubusercontent.com/Muciri/pomotimer/refs/heads/main/src/assets/preview.png">
 </p>
