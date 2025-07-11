@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PomoTimer</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' https://cdn.jsdelivr.net https://unpkg.com;
+    style-src 'self' https://fonts.googleapis.com https://cdn.jsdelivr.net;
+    font-src 'self' https://fonts.gstatic.com;
+    object-src 'none';
+    connect-src 'self';
+    img-src 'self' data:;
+    ">
+</head>
+<body>
+    <h1 id="title">POMOTIMER</h1>
+    
+    <div id="container">
+        <div class="toggle-container">
+            <button data-value="Focus" class="active" id="FocusButton">Foco</button>
+            <button data-value="ShortBreak" id="ShortBreakButton">Pausa</button>
+            <button data-value="LongBreak" id="LongBreakButton">Descanso</button>
+        </div>
+        
+        <h1 id = 'label'>Foco</h1>
+        
+        <div id="subcontainer">
+            <h1 id = 'timer'>25:00</h1>
+            <button class="start" id="start"><strong>START</strong></button>
+            <button class="start" id="skip"><strong>▶︎|</strong></button>
+        </div>
+    </div>
+    <br>
+    
+    <button id="config">⚙️</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/easytimer.js@4.6.0/dist/easytimer.min.js"></script> 
+    <script src="../js/scripts.js"></script>
+</body>
+</html>

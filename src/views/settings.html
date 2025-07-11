@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações</title>
+    <link rel="stylesheet" href="../css/settings.css">
+    <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' https://cdn.jsdelivr.net https://unpkg.com;
+    style-src 'self' https://fonts.googleapis.com https://cdn.jsdelivr.net;
+    font-src 'self' https://fonts.gstatic.com;
+    object-src 'none';
+    connect-src 'self';
+    img-src 'self' data:;
+    ">
+</head>
+<body>
+    <div id="container">
+        <div class="option"> 
+            <p>Foco</p>
+            <input type="number" min="1" id="focusInput">
+        </div>
+
+        <div class="option"> 
+            <p>Pausa Curta</p>
+            <input type="number" min="1" id="shortPauseInput">
+        </div>
+
+        <div class="option"> 
+            <p>Pausa Longa</p>
+            <input type="number" min="1" id="longPauseInput">
+        </div>
+
+        <div class="option"> 
+            <p>Intervalo de Pausa Longa</p>
+            <input type="number" min="1" id="longPauseInterval">
+        </div>
+
+        <button id="save"><strong>salvar</strong></button>
+    </div>
+
+    <script src="../js/settings.js"></script>
+</body>
+</html>
