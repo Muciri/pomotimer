@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Sarpanch:wght@400;500;600;700;800;900&display=swap');
+/* Roboto Condensed */
+@font-face {
+    font-family: "Roboto Condensed";
+    src: url('./fonts/RobotoCondensed-VariableFont_wght.ttf');
+}
 
 body{
     margin-top: 0px;
