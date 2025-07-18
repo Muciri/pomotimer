@@ -39,6 +39,7 @@ ipcMain.on('open-settings-window', () => {
   settingsWin.loadFile('src/views/settings.html');
 });
 
+//rodando o programa
 app.whenReady().then(() => {
   createWindow()
 })

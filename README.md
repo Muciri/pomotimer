@@ -1,9 +1,5 @@
 # PomoTimer
-
----
-
-## **PomoTimer**
-Um app com objetivo de auxiliar nos estudos por meio da técnica Pomodoro
+Um app com objetivo de auxiliar nos estudos por meio da técnica Pomodoro. Desenvolvido em node.js utilizando o framework electron 
 
 ---
 
@@ -34,7 +30,7 @@ git clone https://github.com/Muciri/pomotimer.git
 npm install
 ```
 
-3. Use o comando start
+3. Use o comando start **ou** execute o arquivo **run_app.sh**
 ```bash
 npm run start
 ```
