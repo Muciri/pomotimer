@@ -10,17 +10,26 @@ window.addEventListener('DOMContentLoaded', () => {
 
 //escrevendo dados no settings.json
 document.getElementById('save').addEventListener('click', () => {
-    //lê os dados nos inputs
-    const newData = {
-        Focus: document.getElementById("focusInput").value,
-        ShortBreak: document.getElementById("shortPauseInput").value,
-        LongBreak: document.getElementById("longPauseInput").value,
-        LongBreakInterval: document.getElementById("longPauseInterval").value
-    };
+  //verifica os valores dos inputs
+  const inputs = document.querySelectorAll('input')
 
-    //escreve no arquivo JSON
-    window.api.saveSettings(newData);
+  inputs.forEach(input => {
+    if(input.value <= 0) {
+      input.value = input.min;
+    }
+  })
+  
+  //lê os dados nos inputs
+  const newData = {
+      Focus: document.getElementById("focusInput").value,
+      ShortBreak: document.getElementById("shortPauseInput").value,
+      LongBreak: document.getElementById("longPauseInput").value,
+      LongBreakInterval: document.getElementById("longPauseInterval").value
+  };
 
-    //fecha a janela
-    close();
+  //escreve no arquivo JSON
+  window.api.saveSettings(newData);
+
+  //fecha a janela
+  close();
 })
