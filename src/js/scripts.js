@@ -2,7 +2,7 @@
 const timer = new easytimer.Timer();                                   //Instância da classe Timer
 let selectedCycle = 'Focus';                                           //variável para armazenar o ciclo selecionado no array cycles (é inicializado como Focus)   
 let timerRunning = false;                                              //variável para armazenar o estado do timer (parado ou ativo)
-let focusCyclesCounter = 0;                                            //variável para armazenar quantos ciclos de focos já passaram
+let focusCyclesCounter = 1;                                            //variável para armazenar quantos ciclos de focos já passaram
 const alarm = new Audio('../assets/trim.m4a'); alarm.volume = 0.3;     //alarme tocado quando o temporizador chega a 0
 
 //função para atualizar o label do timer de acordo com o ciclo atual
@@ -20,7 +20,7 @@ function nextCycle(){
     //se a quantidade de ciclos passados for igual ao intervalo, o próximo ciclo será a pausa longa
     if(focusCyclesCounter === parseInt(data['LongBreakInterval'])) {
       document.getElementById('LongBreakButton').click();
-      focusCyclesCounter = -1; //aqui é atribuido o valor -1, pois quando o ciclo voltar para foco, o contador voltará a ser 0
+      focusCyclesCounter = 0; //aqui é atribuido o valor 0, pois quando o ciclo voltar para foco, o contador voltará a ser 1
     }
     
     //se não, o próximo ciclo será a pausa curta
