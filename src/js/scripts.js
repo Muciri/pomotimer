@@ -38,7 +38,6 @@ function nextCycle(){
 
 //menu select
 const buttons = document.querySelectorAll('.toggle-container button');
-
 buttons.forEach(btn => {
   btn.addEventListener('click', () => {
     // Remove a classe ativa de todos
@@ -60,30 +59,24 @@ buttons.forEach(btn => {
 //atualizando o temporizador ao inicializar o programa
 updateTimerLabel();
 
-// variável para Evitar múltiplos listeners
-let listenersSet = false; 
+//atualizando o contador ao passar dos segundos
+timer.addEventListener('secondsUpdated', () => {
+  document.getElementById('timer').innerText = timer.getTimeValues().toString().substring(3);
+});
+
+//pulando o ciclo ao final do contador
+timer.addEventListener('targetAchieved', () => {
+  nextCycle();
+  window.api.playSound(alarm);
+});
 
 document.getElementById('start').addEventListener('click', () => {
   if (!timerRunning) { 
     const data = window.api.loadSettings();
-
     document.getElementById('start').innerHTML = '<strong>PAUSE</strong>';
     timerRunning = true;
-
-    timer.start({ countdown: true, startValues: { minutes: data[selectedCycle]} });
-
-    if (!listenersSet) { //os eventlisteners são criados somente uma vez
-      timer.addEventListener('secondsUpdated', () => {
-        document.getElementById('timer').innerText = timer.getTimeValues().toString().substring(3);
-      });
-
-      timer.addEventListener('targetAchieved', () => {
-        nextCycle();
-        window.api.playSound(alarm);
-      });
-
-      listenersSet = true;
-    }
+    // timer.start({ countdown: true, startValues: { minutes: data[selectedCycle]} });
+    timer.start({ countdown: true, startValues: { seconds: 10} });
   } 
   else {
     timer.pause();
