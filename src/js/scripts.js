@@ -75,8 +75,7 @@ document.getElementById('start').addEventListener('click', () => {
     const data = window.api.loadSettings();
     document.getElementById('start').innerHTML = '<strong>PAUSE</strong>';
     timerRunning = true;
-    // timer.start({ countdown: true, startValues: { minutes: data[selectedCycle]} });
-    timer.start({ countdown: true, startValues: { seconds: 10} });
+    timer.start({ countdown: true, startValues: { minutes: data[selectedCycle]} });
   } 
   else {
     timer.pause();
