@@ -57,6 +57,9 @@ buttons.forEach(btn => {
   });
 });
 
+//atualizando o temporizador ao inicializar o programa
+updateTimerLabel();
+
 // variável para Evitar múltiplos listeners
 let listenersSet = false; 
 
