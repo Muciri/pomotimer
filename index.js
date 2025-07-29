@@ -8,7 +8,7 @@ const createWindow = () => {
     height: 550,
     resizable: false,
     autoHideMenuBar: true,
-    icon: 'src/assets/icon.png',
+    icon: 'src/assets/icon.ico',
     webPreferences: {
       preload: path.join(__dirname, './preload.js'),
       nodeIntegration: false,
@@ -27,7 +27,7 @@ ipcMain.on('open-settings-window', () => {
     height: 350,
     resizable: false,
     autoHideMenuBar: true,
-    icon: 'src/assets/icon.png',
+    icon: 'src/assets/icon.ico',
     webPreferences: {
       preload: path.join(__dirname, './preload.js'),
       contextIsolation: true,
